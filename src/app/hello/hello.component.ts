@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styles: [`:host(.some-class) { color: red; }`],
   host: {
     '[attr.role]': 'role',
-    '(mouseenter)': 'onMouseEnter()',
-    '[class.some-class]': 'someField',
-    'class': 'one two three',
+    'class': 'one two three',         // вариант 1
     'style': 'display: inline-block;',
+    '[class.some-class]': 'someField',
+    '[class.another-class]': 'true',  // вариант 2
+    '(mouseenter)': 'onMouseEnter()',
   }
 })
 export class HelloComponent implements OnInit {

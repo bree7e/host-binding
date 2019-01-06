@@ -7,9 +7,10 @@ import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
 })
 export class WorldComponent implements OnInit {
   @HostBinding('attr.role') role = 'note';
-  @HostBinding('class') readonly staticField1 = 'one two three';
-  @HostBinding('style') readonly staticField2 = 'display: inline-block;';
+  @HostBinding('class') readonly field1 = 'one two three';          // вариант 1
+  @HostBinding('style') readonly field2 = 'display: inline-block;'; // вместо readonly можно getter
   @HostBinding('class.some-class') someField = false;
+  @HostBinding('class.another-class') true;                         // вариант 2
   @HostListener('mouseenter') onMouseEnter() {
     console.log('WorldComponent onMouseEnter');
   }
