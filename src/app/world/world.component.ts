@@ -13,6 +13,8 @@ export class WorldComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.someField = true;
+    setTimeout(() => {
+      this.someField = true;
+    }, 750);
   }
 }

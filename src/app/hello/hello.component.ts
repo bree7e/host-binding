@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   host: {
     '[attr.role]': 'role',
     '(mouseenter)': 'onMouseEnter()',
-    'class': 'some-class'
+    '[class.some-class]': 'someField',
+    'style': 'display: inline-block;',
   }
 })
 export class HelloComponent implements OnInit {
@@ -16,7 +17,9 @@ export class HelloComponent implements OnInit {
   someField = false;
 
   ngOnInit() {
-    this.someField = true;
+    setTimeout(() => {
+      this.someField = true;
+    }, 500);
   }
 
   onMouseEnter() {
