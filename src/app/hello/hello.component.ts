@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
   }
 })
 export class HelloComponent implements OnInit {
-  role = 'note';
+  role = 'main';
   someField = false;
 
   ngOnInit() {
@@ -20,6 +20,6 @@ export class HelloComponent implements OnInit {
   }
 
   onMouseEnter() {
-    console.log('onMouseEnter');
+    console.log('HelloComponent onMouseEnter');
   }
 }
