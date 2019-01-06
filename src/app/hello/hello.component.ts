@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
     '[attr.role]': 'role',
     '(mouseenter)': 'onMouseEnter()',
     '[class.some-class]': 'someField',
+    'class': 'one two three',
     'style': 'display: inline-block;',
   }
 })
